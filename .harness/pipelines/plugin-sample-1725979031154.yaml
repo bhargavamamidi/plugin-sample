@@ -28,21 +28,6 @@ pipeline:
                       echo "Welcome to Harness CI.."
                       go build
                       go test
-              - step:
-                  type: Plugin
-                  name: Plugin_2
-                  identifier: Plugin_2
-                  spec:
-                    connectorRef: account.harnessImage
-                    image: mamid1b/hello-go-app
-              - step:
-                  type: Run
-                  name: Run_2
-                  identifier: Run_2
-                  spec:
-                    connectorRef: account.harnessImage
-                    image: mamid1b/hello-go-app
-                    shell: Sh
           platform:
             os: Linux
             arch: Amd64
