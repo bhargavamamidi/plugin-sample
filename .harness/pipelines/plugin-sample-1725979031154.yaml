@@ -37,7 +37,7 @@ pipeline:
                     image: mamid1b/hello-go-app
                     shell: Sh
           platform:
-            os: Windows
+            os: Linux
             arch: Amd64
           runtime:
             type: Cloud
