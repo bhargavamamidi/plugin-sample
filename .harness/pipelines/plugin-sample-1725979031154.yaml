@@ -29,17 +29,16 @@ pipeline:
                       go build
                       go test
               - step:
-                  type: BuildAndPushDockerRegistry
-                  name: BuildAndPushDockerRegistry_1
-                  identifier: BuildAndPushDockerRegistry_1
+                  type: Run
+                  name: Run_2
+                  identifier: Run_2
                   spec:
                     connectorRef: account.harnessImage
-                    repo: mamid1b/sample-go-app
-                    tags:
-                      - latest
+                    image: mamid1b/hello-go-app
+                    shell: Sh
           platform:
-            os: Linux
-            arch: Amd64
+            os: Windows
+            arch: Arm64
           runtime:
             type: Cloud
             spec: {}
