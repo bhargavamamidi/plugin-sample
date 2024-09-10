@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_rustd_gosample_1701883572388-push-trigger-input-set
+  identifier: Build_rustd_gosample_1701883572388pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: pranavt1
+  pipeline:
+    identifier: Build_rustd_gosample_1701883572388
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>

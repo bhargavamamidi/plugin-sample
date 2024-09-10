@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_rustd_gosample_1701883572388
+  name: Build gosample
+  orgIdentifier: default
+  projectIdentifier: pranavt1
+  properties:
+    ci:
+      codebase:
+        connectorRef: pranavgithub
+        repoName: gosample
+        build: <+input>
+  stages:
+    - stage:
+        identifier: default
+        name: default
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: test
+                  name: test
+                  spec:
+                    command: echo "Hello"
+                    image: golang:latest
+                    imagePullPolicy: IfNotPresent
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
