@@ -25,9 +25,9 @@ pipeline:
                   name: Build Go App
                   spec:
                     command: |-
-                      echo "Welcome to Harness CI..GO.."
+                      echo "Welcome to Harness CI.."
                       go build
-                      do test
+                      go test
           platform:
             arch: Amd64
             os: Linux
