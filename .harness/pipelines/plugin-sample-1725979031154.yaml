@@ -28,6 +28,15 @@ pipeline:
                       echo "Welcome to Harness CI.."
                       go build
                       go test
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    repo: mamid1b/sample-go-app
+                    tags:
+                      - latest
           platform:
             os: Linux
             arch: Amd64
