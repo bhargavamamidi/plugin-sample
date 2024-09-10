@@ -38,7 +38,7 @@ pipeline:
                     shell: Sh
           platform:
             os: Windows
-            arch: Arm64
+            arch: Amd64
           runtime:
             type: Cloud
             spec: {}
