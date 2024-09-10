@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_bhargavamamidi_plugin_sample_1725979068754-pr-trigger-input-set
+  identifier: Build_bhargavamamidi_plugin_sample_1725979068754prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: samplego
+  pipeline:
+    identifier: Build_bhargavamamidi_plugin_sample_1725979068754
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
