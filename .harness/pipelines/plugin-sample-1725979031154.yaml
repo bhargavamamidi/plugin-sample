@@ -20,12 +20,14 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    command: echo hello world
-                  timeout: ""
                   type: Run
+                  identifier: build_go_app
+                  name: Build Go App
+                  spec:
+                    command: |-
+                      echo "Welcome to Harness CI..GO.."
+                      go build
+                      do test
           platform:
             arch: Amd64
             os: Linux
