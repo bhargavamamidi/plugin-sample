@@ -37,6 +37,14 @@ pipeline:
                     repo: mamid1b/go-sample-plugin
                     tags:
                       - latest
+              - step:
+                  type: Run
+                  name: Run_2
+                  identifier: Run_2
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: mamid1b/go-sample-plugin
+                    shell: Sh
           platform:
             os: Linux
             arch: Arm64
