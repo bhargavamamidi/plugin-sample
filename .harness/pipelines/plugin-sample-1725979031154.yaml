@@ -29,13 +29,14 @@ pipeline:
                       go build
                       go test
               - step:
-                  type: Run
-                  name: Run_2
-                  identifier: Run_2
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: account.harnessImage
-                    image: mamid1b/sample-plugin
-                    shell: Sh
+                    repo: mamid1b/go-sample-plugin
+                    tags:
+                      - latest
           platform:
             os: Linux
             arch: Arm64
