@@ -43,7 +43,7 @@ pipeline:
                   identifier: Run_2
                   spec:
                     connectorRef: account.harnessImage
-                    image: mamid1b/go-sample-plugin
+                    image: mamid1b/drone-plugin-test
                     shell: Sh
           platform:
             os: Linux
