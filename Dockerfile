@@ -5,4 +5,4 @@ COPY . .
 
 RUN go build -o drone-plugin .
 
-ENTRYPOINT [./app/drone-plugin]
+ENTRYPOINT [./drone-plugin]
