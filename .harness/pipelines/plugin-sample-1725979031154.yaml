@@ -34,7 +34,7 @@ pipeline:
                   identifier: Run_2
                   spec:
                     connectorRef: account.harnessImage
-                    image: mamid1b/hello-go-app
+                    image: mamid1b/sample-plugin
                     shell: Sh
           platform:
             os: Linux
