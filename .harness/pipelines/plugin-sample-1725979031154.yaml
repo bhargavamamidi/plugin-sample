@@ -25,13 +25,21 @@ pipeline:
                   name: Build Go App
                   spec:
                     command: |-
-                      echo "Welcome to Harness CI..GO.."
+                      echo "Welcome to Harness CI.."
                       go build
-                      do test
+                      go test
+              - step:
+                  type: Run
+                  name: Run_2
+                  identifier: Run_2
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: mamid1b/hello-go-app
+                    shell: Sh
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
